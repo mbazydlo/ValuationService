@@ -1,5 +1,6 @@
 import pandas as pd
 from read_csv import rewrite_csv_to_df
+import os
 
 def deal_with_data():
     df = rewrite_csv_to_df()
@@ -14,5 +15,6 @@ def deal_with_data():
 
     df = products_max[['matching_id','total_price','avg_price']]
     df.to_csv('top_products.csv', sep=';')
+
 
 deal_with_data()
